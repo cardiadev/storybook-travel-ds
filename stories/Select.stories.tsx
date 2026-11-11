@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { FiCalendar, FiDollarSign } from "react-icons/fi";
 import { Select, SelectProps, IOption } from "../src";
 import StoryLayout from "./StoryLayout";
@@ -24,7 +24,7 @@ interface Props extends SelectProps {
   darkMode: boolean;
 }
 
-const StorySelect: Story<Props> = (args) => {
+const StorySelect: StoryFn<Props> = (args) => {
   const [selectedCountry, setSelectedCountry] = React.useState<IOption>(
     countries[0],
   );

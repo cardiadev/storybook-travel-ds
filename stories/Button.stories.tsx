@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { FiStar, FiArrowRight } from "react-icons/fi";
 import { Button, ButtonProps, Figma } from "../src";
 import StoryLayout from "./StoryLayout";
@@ -22,7 +22,7 @@ interface Props extends ButtonProps {
   darkMode: boolean;
 }
 
-const StoryButton: Story<Props> = (args) => (
+const StoryButton: StoryFn<Props> = (args) => (
   <StoryLayout {...args} className="space-y-2">
     <Button {...args}>Button CTA</Button>
 

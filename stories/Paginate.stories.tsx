@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 
 import { Figma, Paginate, PaginationProps } from "../src";
 import StoryLayout from "./StoryLayout";
@@ -22,7 +22,7 @@ interface Props extends PaginationProps {
   darkMode: boolean;
 }
 
-const StoryPagination: Story<Props> = (args) => {
+const StoryPagination: StoryFn<Props> = (args) => {
   const [page, setPage] = React.useState<number>(args.page);
 
   React.useEffect(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 
 import StoryLayout from "./StoryLayout";
 import { MobileNavbar, MobileNavbarProps, SideNav } from "../src";
@@ -24,7 +24,7 @@ interface Props extends MobileNavbarProps {
   darkMode: boolean;
 }
 
-const StoryMobileNavbar: Story<Props> = (args) => {
+const StoryMobileNavbar: StoryFn<Props> = (args) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   const handleToggle = () => {

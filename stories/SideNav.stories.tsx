@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 
 import StoryLayout from "./StoryLayout";
 import { SideNav, ISideNavProps } from "../src";
@@ -23,7 +23,7 @@ interface Props extends ISideNavProps {
   darkMode: boolean;
 }
 
-const StorySideNav: Story<Props> = (args) => {
+const StorySideNav: StoryFn<Props> = (args) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   return (

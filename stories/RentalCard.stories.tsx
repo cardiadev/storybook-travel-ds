@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { RentalCard, RentalCardProps } from "../src";
 import StoryLayout from "./StoryLayout";
 import { rentals, Figma } from "../src/data";
@@ -30,7 +30,7 @@ interface Props extends RentalCardProps {
   rareFind: boolean;
 }
 
-const StoryRentalCard: Story<Props> = (args) => {
+const StoryRentalCard: StoryFn<Props> = (args) => {
   const rentalIndex = rentals.findIndex(
     (rental) => rental.address === args.rentalAddress,
   );

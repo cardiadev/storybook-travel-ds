@@ -1,6 +1,6 @@
 // import * as React from "react";
 // import { render, cleanup, RenderResult } from "@testing-library/react";
-// import "@testing-library/jest-dom/extend-expect";
+// import "@testing-library/jest-dom/vitest";
 // import { ISideNavProps, SideNav } from "./SideNav";
 // import { navItemsTop, navItemsBottom } from "../data/navItems";
 

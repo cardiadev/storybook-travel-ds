@@ -67,6 +67,8 @@ export const Paginate: FC<PaginationProps> = ({
         "flex items-center w-full h-10 text-sm select-none",
         className,
       )}
+      edgePageCount={1}
+      middlePagesSiblingCount={1}
       truncableText="..."
       truncableClassName="w-10 px-0.5 text-center dark:text-gray-500"
     >

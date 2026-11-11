@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { FiGrid, FiList } from "react-icons/fi";
 
 import {
@@ -29,7 +29,7 @@ interface Props extends ButtonGroupProps<string> {
   darkMode: boolean;
 }
 
-const StoryButtonGroup: Story<Props> = (args) => {
+const StoryButtonGroup: StoryFn<Props> = (args) => {
   const [activeItem1, setActiveItem1] = React.useState<string>(
     options1[1].value,
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import StoryLayout from "./StoryLayout";
 
 import { ColorBox } from "../src";
@@ -22,7 +22,7 @@ interface Props {
   darkMode: boolean;
 }
 
-const StoryColors: Story<Props> = (args) => (
+const StoryColors: StoryFn<Props> = (args) => (
   <StoryLayout
     {...args}
     className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11"

@@ -1,9 +1,8 @@
-module.exports = {
-  mode: "jit",
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.tsx", "./stories/**/*.tsx"],
-  },
+import forms from "@tailwindcss/forms";
+import breakpointsInspector from "tailwindcss-breakpoints-inscpector";
+
+export default {
+  content: ["./src/**/*.tsx", "./stories/**/*.tsx"],
   darkMode: "class",
   theme: {
     colors: {
@@ -111,11 +110,9 @@ module.exports = {
       position: ["bottom", "right"],
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("tailwindcss-breakpoints-inscpector"),
+    forms,
+    breakpointsInspector,
   ],
 };
+

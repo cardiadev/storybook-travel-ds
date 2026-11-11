@@ -2,7 +2,7 @@ import * as React from "react";
 // import * as ReactDOM from "react-dom";
 // import renderer from "react-test-renderer";
 import { render } from "@testing-library/react"; // fireEvent
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom/vitest";
 // import { Button } from '../stories/Button.stories';
 import { Typography } from "../src";
 

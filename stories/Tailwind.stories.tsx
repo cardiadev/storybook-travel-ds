@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { images } from "../src/data/images/index";
 
 const meta: Meta = {
@@ -15,7 +15,7 @@ interface Props {
   darkMode: boolean;
 }
 
-const TailwindStory: Story<Props> = () => {
+const TailwindStory: StoryFn<Props> = () => {
   return (
     <div className="flex mt-6 ml-6 w-70">
       <img

@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 
 import { Typography, TypographyProps } from "../src";
 import { Figma } from "../src/data";
@@ -23,7 +23,7 @@ interface Props extends TypographyProps {
   darkMode: boolean;
 }
 
-const TypographyDynamic: Story<Props> = (args) => {
+const TypographyDynamic: StoryFn<Props> = (args) => {
   const isHeading = args.variant.startsWith("h");
 
   return (
@@ -36,7 +36,7 @@ const TypographyDynamic: Story<Props> = (args) => {
   );
 };
 
-const TypographyHeadings: Story<Props> = (args) => {
+const TypographyHeadings: StoryFn<Props> = (args) => {
   return (
     <StoryLayout {...args} className="space-y-2">
       <Typography {...args} variant="h1">
@@ -73,7 +73,7 @@ Heading.parameters = {
   controls: { exclude: ["variant", "customColor", "className"] },
 };
 
-const TypographyText: Story<Props> = (args) => {
+const TypographyText: StoryFn<Props> = (args) => {
   return (
     <StoryLayout {...args} className="space-y-2">
       <Typography {...args} variant="xl">

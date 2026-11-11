@@ -1,7 +1,7 @@
 <h1 align="center">Welcome 👋</h1>
-<h2 align="center">Storybook Talent Land 2023 | Repo</h1>
+<h2 align="center">Storybook Travel DS | Repo</h1>
 <p style="text-align: center">
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
@@ -10,7 +10,7 @@
   </a>
 </p>
 
-> Storybook of UI Components for Talent Land 2023
+> Storybook 10 de componentes UI (React 18, Tailwind 3, Vite). Originado en Talent Land 2023
 
 ### 🏠 [Demo](https://storybook-talent-land-2023.vercel.app/)
 
@@ -19,19 +19,19 @@
 ## Install
 
 ```sh
-yarn install
+bun install
 ```
 
 ## Usage
 
 ```sh
-yarn run start
+bun run dev
 ```
 
 ## Run tests
 
 ```sh
-yarn run test
+bun run test
 ```
 
 ## Author

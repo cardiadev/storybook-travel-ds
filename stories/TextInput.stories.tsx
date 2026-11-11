@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { FiAlertCircle, FiHelpCircle, FiMail } from "react-icons/fi";
 import { TextInput, TextInputProps } from "../src";
 import { Figma } from "../src/data";
@@ -23,7 +23,7 @@ interface Props extends TextInputProps {
   darkMode: boolean;
 }
 
-const StoryTextInput: Story<Props> = (args) => {
+const StoryTextInput: StoryFn<Props> = (args) => {
   const [text1, setText1] = React.useState<string>(args.value);
 
   const handleChange = (value: string) => {

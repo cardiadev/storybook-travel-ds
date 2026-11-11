@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-vite";
 import { FiStar, FiArrowRight } from "react-icons/fi";
 import { Badge, BadgeProps, Figma, images } from "../src";
 import StoryLayout from "./StoryLayout";
@@ -22,7 +22,7 @@ interface Props extends BadgeProps {
   darkMode: boolean;
 }
 
-const StoryBadge: Story<Props> = (args) => (
+const StoryBadge: StoryFn<Props> = (args) => (
   <StoryLayout {...args} className="inline-flex flex-col space-y-2">
     <Badge {...args} LeadingIcon={<FiStar />}>
       Label
