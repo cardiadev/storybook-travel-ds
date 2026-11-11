@@ -6,10 +6,15 @@ import { Figma } from "../src/data";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "TextInput",
+  title: "Components/TextInput",
+  tags: ["autodocs"],
   component: TextInput,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "A single-line text field with optional **label**, **helper text**, **icons** and **leading text**. It is a controlled component.\n\n### States\n- **Default**: ready for input.\n- **Error**: pass `error` to turn the field red and show the message in place of the helper text.\n- **Disabled**: pass `disabled` to prevent edits.\n\n### Guidelines\n- Always set a `label`. A placeholder is a hint, not a label.\n- Use `helperText` to explain format or constraints before the user makes a mistake.\n- `handleChange` receives the string value, not the DOM event." },
+      source: { language: "tsx", code: "import { TextInput } from \"travel-ds\";\nimport { FiMail } from \"react-icons/fi\";\n\nconst [email, setEmail] = useState(\"\");\n\n<TextInput\n  type=\"email\"\n  label=\"Email\"\n  placeholder=\"you@example.com\"\n  helperText=\"We never share your email.\"\n  LeadingIcon={<FiMail />}\n  value={email}\n  handleChange={setEmail}\n/>" },
+    },
     design: {
       type: "figma",
       url: Figma.TextInput,

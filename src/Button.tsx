@@ -64,16 +64,28 @@ const ButtonIconSizeClasses: Record<ButtonSize, string> = {
 };
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Button label. Omit it when using `IconOnly`. */
   children?: string | React.ReactElement;
+  /** Extra Tailwind classes merged into the button. */
   className?: string;
+  /** Visual hierarchy: `primary` for the main action, `tertiary` for the quietest. */
   variant: ButtonVariant;
+  /**
+   * Button size, from `sm` to `2xl`.
+   * @default "md"
+   */
   size?: ButtonSize;
+  /** Icon rendered before the label. */
   LeadingIcon?: React.ReactElement;
+  /** Icon rendered after the label. */
   TrailingIcon?: React.ReactElement;
+  /** Renders a square button that only contains this icon. Add an `aria-label` for accessibility. */
   IconOnly?: React.ReactElement;
+  /** Disables the button and applies the disabled styles. */
   disabled?: boolean;
 }
 
+/** Primary interactive element. Supports five variants, five sizes, leading and trailing icons, and an icon-only mode. */
 export const Button: FC<ButtonProps> = ({
   children,
   className,

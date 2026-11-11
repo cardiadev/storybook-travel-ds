@@ -6,10 +6,15 @@ import { SideNav, ISideNavProps } from "../src";
 import { navItemsTop, navItemsBottom, Figma } from "../src/data";
 
 const meta: Meta = {
-  title: "SideNav",
+  title: "Navigation/SideNav",
+  tags: ["autodocs"],
   component: SideNav,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "The side navigation is the main wayfinding element on desktop. It can be **expanded** (icons and labels) or **collapsed** (icons only).\n\n### Features\n- Search field that filters entries.\n- Nested items with expandable dropdowns.\n- Active item tracking.\n- A profile area with the user name and email.\n\n### Guidelines\n- Put primary destinations in `navItemsTop` and utility links (support, settings) in `navItemsBottom`.\n- Each item follows `INavItem`: an `order`, a `label`, an `icon` and an optional `path` or `subItems`.\n- On small screens pair it with `MobileNavbar`." },
+      source: { language: "tsx", code: "import { SideNav, navItemsTop, navItemsBottom } from \"travel-ds\";\n\nconst [open, setOpen] = useState(true);\n\n<SideNav\n  navItemsTop={navItemsTop}\n  navItemsBottom={navItemsBottom}\n  open={open}\n  setOpen={setOpen}\n  username=\"Veronica Woods\"\n  email=\"veronica@example.com\"\n/>" },
+    },
     design: {
       type: "figma",
       url: Figma.Navbar,

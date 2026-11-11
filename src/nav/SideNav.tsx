@@ -12,15 +12,23 @@ export const renderLogo = () => (
 );
 
 export interface ISideNavProps {
+  /** Extra Tailwind classes for the navigation container. */
   className?: string;
+  /** Main navigation entries, rendered at the top. Supports nested `subItems`. */
   navItemsTop: INavItem[];
+  /** Secondary entries (support, settings), rendered at the bottom. */
   navItemsBottom: INavItem[];
+  /** Whether the bar is expanded (labels visible) or collapsed (icons only). */
   open: boolean;
+  /** Called to expand or collapse the bar. */
   setOpen: (open: boolean) => void;
+  /** Name of the signed-in user, shown in the profile area. */
   username: string;
+  /** Email of the signed-in user, shown under the name. */
   email: string;
 }
 
+/** Collapsible side navigation with search, nested items, active state tracking and a user profile footer. */
 export const SideNav: FC<ISideNavProps> = ({
   className,
   navItemsTop,

@@ -12,10 +12,15 @@ import {
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "ButtonGroup",
+  title: "Components/ButtonGroup",
+  tags: ["autodocs"],
   component: ButtonGroup,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "A button group joins related options into one segmented control where **exactly one option is active**. It is controlled: you own the state and the component reports changes.\n\n### When to use\n- Switch between views (list, grid, map).\n- Pick a filter or time range.\n\n### Guidelines\n- Use two to five options with short labels.\n- Each option needs a unique `value`. The type of `value` is generic, so it can be a string, a number or an enum.\n- For choices that submit data, prefer `Select`." },
+      source: { language: "tsx", code: "import { ButtonGroup } from \"travel-ds\";\n\nconst [view, setView] = useState(\"list\");\n\n<ButtonGroup\n  active={view}\n  setActive={setView}\n  options={[\n    { value: \"list\", content: \"List\" },\n    { value: \"map\", content: \"Map\" },\n  ]}\n/>" },
+    },
     design: {
       type: "figma",
       url: Figma.ButtonGroup,

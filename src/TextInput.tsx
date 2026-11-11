@@ -3,19 +3,31 @@ import classNames from "classnames";
 import { Typography } from "./Typography";
 
 export interface TextInputProps {
+  /** Native input type. */
   type: "text" | "email";
+  /** Controlled value of the input. */
   value: string;
+  /** Called with the new string whenever the user types. */
   handleChange: (value: string) => void;
+  /** Label rendered above the field. */
   label?: string;
+  /** Static text shown inside the field before the value, e.g. `https://`. */
   leadingText?: string;
+  /** Placeholder shown while the input is empty. */
   placeholder: string;
+  /** Error message. When set, the field turns red and the message replaces `helperText`. */
   error?: string;
+  /** Hint displayed below the field. */
   helperText?: string;
+  /** Icon rendered inside the field, before the text. */
   LeadingIcon?: React.ReactElement;
+  /** Icon rendered inside the field, after the text. */
   TrailingIcon?: React.ReactElement;
+  /** Disables the input. */
   disabled?: boolean;
 }
 
+/** Single-line text field with label, helper text, error state and optional icons. */
 export const TextInput: FC<TextInputProps> = ({
   type,
   value,

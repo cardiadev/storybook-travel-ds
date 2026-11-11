@@ -14,9 +14,11 @@ import {
 import { useRentalRating } from "./helpers/useRentalRating";
 
 export interface RentalCardProps {
+  /** Listing to display: image, title, rating, amenities, price and coordinates. */
   rental: IRental;
 }
 
+/** Card that presents a rental listing with photo, badge, rating, amenities, price and a booking action. Responsive: stacked on mobile, horizontal from `md`. */
 export const RentalCard: FC<RentalCardProps> = ({ rental }) => {
   const { arrayStarsFilled, arrayStarsRemaining } = useRentalRating(
     rental.rating,

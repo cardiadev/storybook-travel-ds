@@ -5,11 +5,20 @@ type BadgeVariant = "gray" | "primary" | "error" | "warning" | "success";
 type BadgeSize = "sm" | "md" | "lg";
 
 export interface BadgeProps {
+  /** Text (or element) shown inside the badge. */
   children: string | React.ReactElement;
+  /** Extra Tailwind classes, e.g. to position the badge over an image. */
   className?: string;
+  /** Color scheme that communicates the meaning of the badge. */
   variant: BadgeVariant;
+  /**
+   * Visual size of the badge.
+   * @default "md"
+   */
   size?: BadgeSize;
+  /** Icon rendered before the label. Pass an element such as `<FiStar />`. */
   LeadingIcon?: React.ReactElement;
+  /** Icon rendered after the label. Pass an element such as `<FiArrowRight />`. */
   TrailingIcon?: React.ReactElement;
 }
 
@@ -27,6 +36,7 @@ const BadgeSizeClasses: Record<BadgeSize, string> = {
   lg: "badge-lg",
 };
 
+/** Small label used to highlight a status, category or count. */
 export const Badge: FC<BadgeProps> = ({
   variant,
   size = "md",

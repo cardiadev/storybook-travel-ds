@@ -7,12 +7,15 @@ interface IButtonItem<T> {
 }
 
 export interface ButtonGroupProps<T> {
+  /** Value of the currently selected option. */
   active: T;
-  setActive: (active: T) => void; // or if you prefer setState
-  // Dispatch<SetStateAction<T>>
+  /** Called with the option value when the user clicks a button. Works with a `useState` setter. */
+  setActive: (active: T) => void;
+  /** Buttons to render, each with a unique `value` and the `content` to display. */
   options: IButtonItem<T>[];
 }
 
+/** A connected set of buttons where exactly one option is active, useful for view or filter switches. */
 export const ButtonGroup = <T extends unknown>({
   active,
   setActive,

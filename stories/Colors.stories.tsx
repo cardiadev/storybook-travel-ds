@@ -6,9 +6,13 @@ import { ColorBox } from "../src";
 import { colors, Figma } from "../src/data";
 
 const meta: Meta = {
-  title: "Colors",
+  title: "Foundations/Colors",
+  tags: ["autodocs"],
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "The color palette is defined as Tailwind tokens in `tailwind.config.js`. Every color has a scale from **25** (lightest) to **900** (darkest).\n\n### Palettes\n| Palette | Purpose |\n| --- | --- |\n| `gray` | Text, borders and surfaces |\n| `primary` | Brand color and interactive elements |\n| `success` | Positive feedback and confirmation |\n| `warning` | Caution and pending states |\n| `error` | Errors and destructive actions |\n\n### Guidelines\n- Use the token names (`bg-primary-600`, `text-gray-500`), never raw hex values.\n- Each box below shows the Tailwind token number and its hex.\n- Check contrast: use scale 600 or darker for text on white backgrounds." },
+    },
     design: {
       type: "figma",
       url: Figma.Colors,

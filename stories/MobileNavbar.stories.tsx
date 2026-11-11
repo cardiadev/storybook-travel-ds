@@ -7,10 +7,15 @@ import { navItemsTop, navItemsBottom, Figma } from "../src/data";
 import { FiX } from "react-icons/fi";
 
 const meta: Meta = {
-  title: "MobileNavbar",
+  title: "Navigation/MobileNavbar",
+  tags: ["autodocs"],
   component: MobileNavbar,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "The mobile navbar is the top bar on small screens. It shows the logo and app name, and a **menu button** that opens the navigation.\n\n### Usage\nIt is a presentational component: you decide what opens. In the example below it toggles a full-height `SideNav` over a dimmed backdrop.\n\n### Guidelines\n- Keep it fixed at the top and above page content (`z-40` or higher).\n- Hide it from the `md` breakpoint up, where `SideNav` takes over." },
+      source: { language: "tsx", code: "import { MobileNavbar } from \"travel-ds\";\n\nconst [open, setOpen] = useState(false);\n\n<MobileNavbar open={open} toggleOpen={() => setOpen(!open)} />" },
+    },
     design: {
       type: "figma",
       url: Figma.Navbar,

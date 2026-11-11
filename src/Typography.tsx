@@ -49,14 +49,24 @@ const TypographyWeightClasses: Record<
 };
 
 export interface TypographyProps {
+  /** Render as a `label` instead of the default element (`h1` to `h6` for display variants, `p` otherwise). */
   as?: "label";
+  /** Type scale step. `h1` to `h6` are display sizes, `xs` to `xl` are body sizes. */
   variant: TypographyVariant;
+  /** Tailwind text color classes, e.g. `text-gray-500 dark:text-white`. Defaults to black in light mode and white in dark mode. */
   customColor?: string;
+  /**
+   * Font weight.
+   * @default "regular"
+   */
   customWeight?: TypographyWeightOption;
+  /** Extra Tailwind classes. */
   className?: string;
+  /** Content of the text element. */
   children: string | React.ReactNode;
 }
 
+/** Text component that applies the design system type scale and renders semantic heading tags automatically. */
 export const Typography: FC<TypographyProps> = ({
   as,
   variant,

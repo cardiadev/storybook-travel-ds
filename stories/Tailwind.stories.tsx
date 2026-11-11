@@ -3,9 +3,13 @@ import { Meta, StoryFn } from "@storybook/react-vite";
 import { images } from "../src/data/images/index";
 
 const meta: Meta = {
-  title: "Tailwind",
+  title: "Examples/Avatar with Tailwind",
+  tags: ["autodocs"],
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "A small example that shows how the design tokens (`text-sm`, `font-medium`, `gray` scale, `w-70` spacing) are used directly with Tailwind utility classes, outside any component.\n\nUse this pattern for one-off layouts, and promote it to a component when it appears more than twice." },
+    },
   },
 };
 

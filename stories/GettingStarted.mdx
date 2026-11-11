@@ -1,0 +1,74 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+Set up the project locally in under a minute.
+
+## Requirements
+
+- [bun](https://bun.sh) 1.x
+- Git
+
+## Install and run
+
+```bash
+git clone https://github.com/cardiadev/storybook-travel-ds.git
+cd storybook-travel-ds
+bun install
+bun run dev
+```
+
+Storybook opens at `http://localhost:6006`.
+
+## Project scripts
+
+| Command | What it does |
+| --- | --- |
+| `bun run dev` | Start Storybook in development mode |
+| `bun run build` | Build a static Storybook into `storybook-static/` |
+| `bun run test` | Run unit tests with Vitest and Testing Library |
+| `bun run typecheck` | Type-check the whole project with TypeScript |
+
+## Project structure
+
+```text
+.storybook/   Storybook config, theme and docs styles
+src/          Components, sample data and Tailwind styles
+stories/      One story file per component, plus these docs
+test/         Additional tests
+```
+
+## Using a component
+
+Components are plain React and TypeScript. They style themselves with Tailwind, so make sure the Tailwind config and `src/styles/tailwind.css` are part of your build.
+
+```tsx
+import { Button, Badge, Typography } from "./src";
+
+export function Example() {
+  return (
+    <div className="space-y-3">
+      <Typography variant="h5" customWeight="semibold">Lisbon, Portugal</Typography>
+      <Badge variant="success">Available</Badge>
+      <Button variant="primary" onClick={() => alert("Booked!")}>Book now</Button>
+    </div>
+  );
+}
+```
+
+## Dark mode
+
+Add the `dark` class to a parent element and every component switches theme. See [Dark mode](/?path=/docs/foundations-dark-mode--docs) for details.
+
+## Adding a new component
+
+1. Create `src/MyComponent.tsx` and export it from `src/index.tsx`.
+2. Document every prop with a JSDoc comment. Storybook turns it into the props table.
+3. Create `stories/MyComponent.stories.tsx` with `tags: ["autodocs"]` and a short description in `parameters.docs.description.component`.
+4. Run `bun run typecheck && bun run test` before opening a pull request.
+
+## Deployment
+
+Every push to `main` is deployed to Vercel from `storybook-static/`. You can also build the included `Dockerfile` to serve the static site with nginx.

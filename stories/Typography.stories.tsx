@@ -6,10 +6,15 @@ import { Figma } from "../src/data";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "Typography",
+  title: "Foundations/Typography",
+  tags: ["autodocs"],
   component: Typography,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "The type scale of the design system. Use `Typography` instead of raw tags so size, weight and color stay consistent and dark mode works automatically.\n\n### Scale\n- **Display**: `h1` (72px) down to `h6` (24px). They render the matching semantic heading tag (`<h1>` to `<h6>`).\n- **Text**: `xl` (20px) down to `xs` (12px). They render a `<p>`.\n\n### Guidelines\n- Choose the tag by document structure and the size by design: use `className` or `as=\"label\"` when you need different semantics.\n- Weights: `regular`, `medium`, `semibold`, `bold`.\n- `customColor` takes Tailwind classes. Include a `dark:` variant when you override the default." },
+      source: { language: "tsx", code: "import { Typography } from \"travel-ds\";\n\n<Typography variant=\"h3\" customWeight=\"semibold\">Find your next stay</Typography>\n<Typography variant=\"md\" customColor=\"text-gray-500 dark:text-gray-300\">\n  Over 10,000 places to explore.\n</Typography>" },
+    },
     design: {
       type: "figma",
       url: Figma.Typography,

@@ -7,10 +7,15 @@ import StoryLayout from "./StoryLayout";
 import { countries, dates, Figma, prices } from "../src/data";
 
 const meta: Meta = {
-  title: "Select",
+  title: "Components/Select",
+  tags: ["autodocs"],
   component: Select,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "A dropdown to choose **one value** from a list. It is built on Headless UI `Listbox`, so it supports keyboard navigation, focus management and screen readers out of the box.\n\n### Guidelines\n- Use it when there are more than four options. For fewer, consider `ButtonGroup`.\n- Always provide a `placeholder` that describes the choice, such as \"Select a country\".\n- `setSelectedOption` receives the option `value`, so keep your state as the value and look up the option to pass `selectedOption`.\n- Set `width` (for example `w-72`) to make the field and its menu a fixed width." },
+      source: { language: "tsx", code: "import { Select } from \"travel-ds\";\n\nconst [value, setValue] = useState<string>();\n\n<Select\n  placeholder=\"Select a country\"\n  options={countries}\n  selectedOption={countries.find((o) => o.value === value)}\n  setSelectedOption={setValue}\n  width=\"w-72\"\n/>" },
+    },
     design: {
       type: "figma",
       url: Figma.Select,

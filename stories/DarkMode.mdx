@@ -1,0 +1,30 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Dark Mode" />
+
+# Dark mode
+
+All components support dark mode through Tailwind's **class strategy** (`darkMode: "class"`).
+
+## How it works
+
+Add the `dark` class to any ancestor element, usually `<html>`. Components then apply their `dark:` styles.
+
+```tsx
+<html className="dark">
+  <body>
+    <Button variant="primary">Looks great in the dark</Button>
+  </body>
+</html>
+```
+
+## In Storybook
+
+Each story has a **darkMode** control. Turn it on to wrap the story in a dark surface and preview the component in the dark theme.
+
+## Writing dark-mode friendly styles
+
+- Always pair a light color with its dark counterpart: `text-gray-900 dark:text-white`.
+- Prefer the `gray` scale for surfaces: `bg-white dark:bg-gray-800`.
+- For custom text color in `Typography`, include the `dark:` variant: `customColor="text-gray-500 dark:text-gray-300"`.
+- Check contrast with the **Accessibility** panel in both themes.

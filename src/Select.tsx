@@ -5,14 +5,21 @@ import classNames from "classnames";
 import { IOption } from "./@interfaces";
 
 export interface SelectProps {
+  /** Available options as `{ value, label }` pairs. */
   options: IOption[];
+  /** Currently selected option, or `undefined` to show the placeholder. */
   selectedOption: IOption | undefined;
+  /** Called with the `value` of the option the user picks. */
   setSelectedOption: (option: string) => void;
+  /** Text shown while nothing is selected. */
   placeholder?: string;
+  /** Icon rendered at the start of the field. */
   LeadingIcon?: React.ReactElement;
+  /** Tailwind width class for the field, e.g. `w-72`. Defaults to the content width. */
   width?: string;
 }
 
+/** Accessible dropdown built on Headless UI `Listbox`, with keyboard navigation and an optional leading icon. */
 export const Select: FC<SelectProps> = ({
   options,
   selectedOption,

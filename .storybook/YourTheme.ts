@@ -9,7 +9,7 @@ export default create({
     fontCode: 'monospace',
   
     brandTitle: 'My Travel App',
-    brandUrl: 'https://carlosdiaz.dev',
+    brandUrl: '/?path=/docs/introduction--docs',
     brandImage: 'https://res.cloudinary.com/cardiadev/image/upload/v1681108072/talent_land_2023/logo_emcsjc.png',
     // brandImage: 'https://res.cloudinary.com/cardiadev/image/upload/v1681108072/talent_land_2023/logo_mujqza.jpg',
     brandTarget: '_self',

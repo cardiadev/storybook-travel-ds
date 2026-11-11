@@ -5,7 +5,8 @@ import StoryLayout from "./StoryLayout";
 import { rentals, Figma } from "../src/data";
 
 const meta: Meta = {
-  title: "RentalCard",
+  title: "Components/RentalCard",
+  tags: ["autodocs"],
   component: RentalCard,
   argTypes: {
     rentalAddress: {
@@ -15,6 +16,10 @@ const meta: Meta = {
   },
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "The rental card summarizes a **listing** in search results: photo, optional highlight badge, rating with reviews, amenities, price and a booking action.\n\n### Responsive behavior\nOn small screens the card is stacked with the photo on top. From the `md` breakpoint it becomes a horizontal card.\n\n### Data\nThe card takes a single `rental` object that follows the `IRental` interface. Sample data is exported as `rentals` for demos and tests." },
+      source: { language: "tsx", code: "import { RentalCard, rentals } from \"travel-ds\";\n\n<RentalCard rental={rentals[0]} />" },
+    },
     design: {
       type: "figma",
       url: Figma.RentalCard,

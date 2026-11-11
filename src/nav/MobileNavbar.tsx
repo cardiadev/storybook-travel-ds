@@ -4,10 +4,13 @@ import { Typography } from "../Typography";
 import { renderLogo } from "./SideNav";
 
 export interface MobileNavbarProps {
+  /** Whether the mobile menu is open. Controls the icon (hamburger or close). */
   open: boolean;
+  /** Called when the user taps the menu icon. */
   toggleOpen: () => void;
 }
 
+/** Top bar for small screens with the logo, app name and a menu toggle that pairs with `SideNav`. */
 export const MobileNavbar: FC<MobileNavbarProps> = ({ open, toggleOpen }) => (
   <div className="z-40 flex items-center justify-between h-20 py-6 bg-white shadow-md dark:bg-gray-900 px-9">
     {renderLogo()}

@@ -1,0 +1,87 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+<div className="ds-hero">
+  <h1>My Travel App Design System</h1>
+  <p>
+    A React and Tailwind component library for building travel and rental experiences.
+    Consistent, accessible, dark-mode ready and documented right here, with live examples you can edit.
+  </p>
+  <div className="ds-badges">
+    <span>React 18</span>
+    <span>TypeScript</span>
+    <span>Tailwind CSS 3</span>
+    <span>Dark mode</span>
+    <span>Figma linked</span>
+  </div>
+</div>
+
+## What is inside
+
+The library is organized in three layers. Start from the foundations, then compose components into navigation and pages.
+
+<div className="ds-grid">
+  <a className="ds-card" href="/?path=/docs/foundations-colors--docs" target="_parent">
+    <strong>Colors</strong>
+    <span>Five palettes with a 25 to 900 scale, defined as Tailwind tokens.</span>
+    <small>Foundations</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/foundations-typography--docs" target="_parent">
+    <strong>Typography</strong>
+    <span>A type scale from display headings to captions, with semantic tags.</span>
+    <small>Foundations</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/components-button--docs" target="_parent">
+    <strong>Button</strong>
+    <span>Five variants, five sizes, icons and an icon-only mode.</span>
+    <small>Components</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/components-textinput--docs" target="_parent">
+    <strong>TextInput</strong>
+    <span>Labeled field with helper text, icons and error state.</span>
+    <small>Components</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/components-select--docs" target="_parent">
+    <strong>Select</strong>
+    <span>Accessible dropdown with keyboard support.</span>
+    <small>Components</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/components-rentalcard--docs" target="_parent">
+    <strong>RentalCard</strong>
+    <span>Listing summary with photo, rating, amenities and price.</span>
+    <small>Components</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/navigation-sidenav--docs" target="_parent">
+    <strong>SideNav</strong>
+    <span>Collapsible navigation with search and nested items.</span>
+    <small>Navigation</small>
+  </a>
+  <a className="ds-card" href="/?path=/docs/navigation-mobilenavbar--docs" target="_parent">
+    <strong>MobileNavbar</strong>
+    <span>Top bar for small screens with a menu toggle.</span>
+    <small>Navigation</small>
+  </a>
+</div>
+
+## Principles
+
+- **Consistent.** Every component reads from the same tokens, so spacing, color and type never drift.
+- **Accessible.** Interactive components use semantic elements, visible focus rings and Headless UI where behavior is complex.
+- **Themeable.** Dark mode works through the Tailwind `dark` class. Use the **Dark mode** control in each story to preview it.
+- **Documented.** Each page has a description, usage guidance, a props table and live controls.
+
+## How to explore
+
+1. Open any component and read the **Docs** tab for guidance and the props table.
+2. Switch to a story and use the **Controls** panel to change props live.
+3. Use the **Accessibility** panel to check contrast and ARIA issues.
+4. Open the **Design** panel to compare the component with its Figma source.
+
+<div className="ds-note">
+  New here? Read <a href="/?path=/docs/getting-started--docs" target="_parent">Getting Started</a> to install and run the project.
+</div>
+
+<div className="ds-footer">
+  Originally built for Talent Land 2023. Maintained by <a href="https://carlosdiaz.dev" target="_blank" rel="noopener noreferrer">Carlos Diaz</a>.
+</div>

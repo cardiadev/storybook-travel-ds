@@ -4,13 +4,19 @@ import { Pagination } from "react-headless-pagination";
 import classNames from "classnames";
 
 export interface PaginationProps {
+  /** Switches to the compact layout with arrows and a "Page x out of y" label. */
   isMobile: boolean;
+  /** Current zero-based page index. */
   page: number;
+  /** Called with the new zero-based page index. */
   setPage: (page: number) => void;
+  /** Total number of pages. */
   totalPages: number;
+  /** Extra Tailwind classes for the container. */
   className?: string;
 }
 
+/** Page navigation with numbered buttons and truncation on desktop and a compact layout on mobile. */
 export const Paginate: FC<PaginationProps> = ({
   isMobile,
   page,

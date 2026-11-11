@@ -5,10 +5,15 @@ import { Figma, Paginate, PaginationProps } from "../src";
 import StoryLayout from "./StoryLayout";
 
 const meta: Meta = {
-  title: "Paginate",
+  title: "Components/Paginate",
+  tags: ["autodocs"],
   component: Paginate,
   parameters: {
     controls: { expanded: true },
+    docs: {
+      description: { component: "Pagination lets people move through a large set of results. It shows numbered pages with truncation on **desktop** and switches to a compact \"Page x out of y\" layout on **mobile**.\n\n### Guidelines\n- `page` is **zero-based**: the first page is `0`.\n- Control the layout with `isMobile`, for example from a media query hook.\n- Place it below the list it controls and keep the page size stable." },
+      source: { language: "tsx", code: "import { Paginate } from \"travel-ds\";\n\nconst [page, setPage] = useState(0);\n\n<Paginate page={page} setPage={setPage} totalPages={10} isMobile={false} />" },
+    },
     design: {
       type: "figma",
       url: Figma.Paginate,
