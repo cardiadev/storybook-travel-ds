@@ -16,16 +16,27 @@ const STYLE = `
   padding: 14px 20px;
   border-top: 1px solid #e4e7ec;
   background: #fff;
-  font: 13px/1.4 "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
   color: #585c6d;
   text-align: center;
 }
-#${FOOTER_ID} a {
-  color: #3a10e5;
+#${FOOTER_ID} a,
+#${FOOTER_ID} a:visited {
+  color: #10162f;
   font-weight: 600;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
-#${FOOTER_ID} a:hover { text-decoration: underline; }
+#${FOOTER_ID} a:hover,
+#${FOOTER_ID} a:focus-visible {
+  color: #3a10e5;
+  border-bottom-color: #3a10e5;
+  outline: none;
+}
 `;
 
 function mountFooter() {
@@ -42,9 +53,7 @@ function mountFooter() {
   const footer = document.createElement("div");
   footer.id = FOOTER_ID;
   footer.innerHTML =
-    'Made by ' +
-    '<a href="https://carlosdiaz.dev" target="_blank" rel="noopener noreferrer">Carlos Diaz</a>' +
-    '<br /><a href="https://carlosdiaz.dev" target="_blank" rel="noopener noreferrer" style="font-weight:400">carlosdiaz.dev</a>';
+    'Made by <a href="https://carlosdiaz.dev" target="_blank" rel="noopener noreferrer">Carlos Diaz</a>';
   sidebar.appendChild(footer);
 }
 
