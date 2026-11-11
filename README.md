@@ -1,51 +1,86 @@
-<h1 align="center">Welcome 👋</h1>
-<h2 align="center">Storybook Travel DS | Repo</h1>
-<p style="text-align: center">
-  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-  <a href="https://twitter.com/cardiadev" target="_blank">
-    <img alt="Twitter: cardiadev" src="https://img.shields.io/twitter/follow/cardiadev.svg?style=social" />
-  </a>
+<h1 align="center">Storybook Travel DS</h1>
+
+<p align="center">
+  Sistema de diseño de componentes UI para una app de viajes, documentado con Storybook 10.
 </p>
 
-> Storybook 10 de componentes UI (React 18, Tailwind 3, Vite). Originado en Talent Land 2023
+<p align="center">
+  <a href="https://storybook-travel-ds.vercel.app/"><img alt="Demo" src="https://img.shields.io/badge/demo-vercel-black?logo=vercel" /></a>
+  <img alt="Storybook" src="https://img.shields.io/badge/Storybook-10-FF4785?logo=storybook&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-3-38BDF8?logo=tailwindcss&logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white" />
+  <img alt="bun" src="https://img.shields.io/badge/bun-1.x-000?logo=bun" />
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+</p>
 
-### 🏠 [Demo](https://storybook-talent-land-2023.vercel.app/)
+<p align="center">
+  <a href="https://storybook-travel-ds.vercel.app/"><b>Ver Storybook en vivo</b></a>
+</p>
 
+## Qué incluye
 
+Componentes React con TypeScript y Tailwind, cada uno con su historia, controles interactivos, modo oscuro y vínculo a su diseño en Figma:
 
-## Install
+| Componente | Descripción |
+| --- | --- |
+| `Button`, `ButtonGroup` | Botones con variantes, tamaños e íconos |
+| `Badge` | Etiquetas de estado |
+| `TextInput`, `Select` | Campos de formulario |
+| `Paginate` | Paginación accesible |
+| `RentalCard` | Tarjeta de alojamiento con calificación y precio |
+| `SideNav`, `MobileNavbar` | Navegación lateral y móvil |
+| `Typography`, `Colors` | Tipografía y paleta de diseño |
 
-```sh
+El tema de marca y los tokens (colores, escala tipográfica, espaciados) están en `.storybook/YourTheme.ts` y `tailwind.config.js`.
+
+## Empezar
+
+Requiere [bun](https://bun.sh).
+
+```bash
 bun install
+bun run dev        # Storybook en http://localhost:6006
 ```
 
-## Usage
+## Scripts
 
-```sh
-bun run dev
+| Comando | Qué hace |
+| --- | --- |
+| `bun run dev` | Storybook en modo desarrollo |
+| `bun run build` | Genera `storybook-static/` listo para publicar |
+| `bun run test` | Pruebas con Vitest y Testing Library |
+| `bun run typecheck` | Verificación de tipos con TypeScript |
+
+## Estructura
+
+```
+.storybook/   configuración de Storybook, tema y addons
+src/          componentes, datos de ejemplo y estilos
+stories/      historias de cada componente
+test/         pruebas adicionales
 ```
 
-## Run tests
+## Despliegue
 
-```sh
-bun run test
+El proyecto se publica en Vercel (configuración en `vercel.json`). También incluye un `Dockerfile` que sirve el build con nginx:
+
+```bash
+docker build -t storybook-travel-ds .
+docker run -p 8080:80 storybook-travel-ds
 ```
 
-## Author
+## Historia
 
-👤 **Carlos J. Diaz Flores**
+Nació como el Storybook de la charla de Talent Land 2023 y se modernizó: Storybook 6.3 a 10, Tailwind 2 a 3, tsdx y Jest a Vite y Vitest, y yarn a bun.
 
-* Website: https://carlosdiaz.dev/
-* Twitter: [@cardiadev](https://twitter.com/cardiadev)
-* Github: [@cardiadev](https://github.com/cardiadev)
-* LinkedIn: [@cardiadev](https://linkedin.com/in/cardiadev)
+## Autor
 
-## Show your support
+**Carlos J. Diaz Flores** ([@cardiadev](https://github.com/cardiadev))
 
-Give a ⭐️ if this project helped you!
+- Sitio: [carlosdiaz.dev](https://carlosdiaz.dev/)
+- LinkedIn: [cardiadev](https://linkedin.com/in/cardiadev)
 
-***
-_This README was generated with ❤️ by [Carlos Diaz | @cardiadev](https://cardiadev.dev)_
+## Licencia
+
+[MIT](LICENSE)
