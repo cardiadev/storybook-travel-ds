@@ -70,10 +70,6 @@ docker build -t storybook-travel-ds .
 docker run -p 8080:80 storybook-travel-ds
 ```
 
-## Historia
-
-Nació como el Storybook de la charla de Talent Land 2023 y se modernizó: Storybook 6.3 a 10, Tailwind 2 a 3, tsdx y Jest a Vite y Vitest, y yarn a bun.
-
 ## Autor
 
 **Carlos J. Diaz Flores** ([@cardiadev](https://github.com/cardiadev))

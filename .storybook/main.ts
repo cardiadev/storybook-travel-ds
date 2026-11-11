@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-designs",
   ],
+  staticDirs: ["../public"],
   framework: "@storybook/react-vite",
 };
 

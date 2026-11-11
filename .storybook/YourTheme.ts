@@ -10,8 +10,7 @@ export default create({
   
     brandTitle: 'My Travel App',
     brandUrl: '/?path=/docs/introduction--docs',
-    brandImage: 'https://res.cloudinary.com/cardiadev/image/upload/v1681108072/talent_land_2023/logo_emcsjc.png',
-    // brandImage: 'https://res.cloudinary.com/cardiadev/image/upload/v1681108072/talent_land_2023/logo_mujqza.jpg',
+    brandImage: './logo.png',
     brandTarget: '_self',
   
     //
